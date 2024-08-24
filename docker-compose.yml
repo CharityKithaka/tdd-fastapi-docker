@@ -11,7 +11,7 @@ services:
     environment:
       - ENVIRONMENT=dev
       - TESTING=0
-      - DATABASE_URL=postgres://postgres:password@web-db:5432/web_dev
+      - DATABASE_URL=postgres://postgres:postgres@web-db:5432/web_dev 
       - DATABASE_TEST_URL=postgres://postgres:postgres@web-db:5432/web_test
     depends_on:
       - web-db
@@ -20,8 +20,8 @@ services:
     build:
       context: ./
       dockerfile: db/Dockerfile
-    ports:
-      - 5432:5432
+    expose:
+      - 5432
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
