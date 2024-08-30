@@ -20,7 +20,7 @@ def test_create_summaries_invalid_json(test_app):
                 "loc": ["body", "url"],
                 "msg": "Field required",
                 "type": "missing",
-                "url": "https://errors.pydantic.dev/2.5/v/missing",
+                "url": "https://errors.pydantic.dev/2.8/v/missing",
             }
         ]
     }
